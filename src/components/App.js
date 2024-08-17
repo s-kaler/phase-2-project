@@ -6,6 +6,15 @@ import { Outlet, Navigate, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 function App() {
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:4000/blogs")
+      .then(r => r.json())
+      .then(data => setBlogPosts(data))
+      .catch(error => console.error(error));
+  }, []);
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
@@ -28,7 +37,7 @@ function App() {
   return (
     <div className="App">
       {isLoggedIn ? <NavBar logout={logout} /> : <Navigate to="/login" />}
-      <Outlet />
+      <Outlet context={[login, blogPosts]}/>
     </div>
   );
 }
