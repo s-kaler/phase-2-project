@@ -6,6 +6,7 @@ function NavBar({logout}) {
     <nav>
         <NavLink to="/" className="nav-link">Home</NavLink>
         {" "}
+        <NavLink to="/profile" className="nav-link">Profile</NavLink>
         <button onClick={logout} className="logout">Logout</button>
     </nav>
   )

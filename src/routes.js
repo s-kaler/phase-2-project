@@ -2,6 +2,7 @@ import App from './components/App';
 import Home from './components/Home';
 import Login from './components/Login';
 import BlogPost from './components/BlogPost';
+import Profile from './components/Profile';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
       {
         path: "/blogs/:id",
         element: <BlogPost />
+      },
+      {
+        path: 'profile',
+        element: <Profile />
       }
     ]
   }
