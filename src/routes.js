@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import BlogPost from './components/BlogPost';
 import Profile from './components/Profile';
+import SignUp from './components/SignUp';
 
 const routes = [
   {
@@ -22,9 +23,13 @@ const routes = [
         element: <BlogPost />
       },
       {
-        path: 'profile',
+        path: 'signup',
+        element: <SignUp />
+      },
+      {
+        path: 'profile/:id',
         element: <Profile />
-      }
+      },
     ]
   }
 ]

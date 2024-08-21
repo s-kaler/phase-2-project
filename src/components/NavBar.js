@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar({logout}) {
+function NavBar({currentUser, logout}) {
+  const profileLink = `/profile/${currentUser.userId}`;
   return (
     <nav>
         <NavLink to="/" className="nav-link">Home</NavLink>
         {" "}
-        <NavLink to="/profile" className="nav-link">Profile</NavLink>
+        <NavLink to={profileLink} className="nav-link">Profile</NavLink>
         <button onClick={logout} className="logout">Logout</button>
     </nav>
   )

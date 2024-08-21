@@ -18,5 +18,13 @@
       "author": "Bob Johnson",
       "id": 3
     }
+  ],
+  "users": [
+    {
+      "username": "john",
+      "password": "password",
+      "blogs": [],
+      "id": 1
+    }
   ]
 }

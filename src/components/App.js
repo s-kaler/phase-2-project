@@ -1,12 +1,12 @@
 import './App.css';
 import NavBar from './NavBar';
-import Home from './Home';
 import './App.css';
 import { Outlet, Navigate, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 function App() {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:4000/blogs")
@@ -18,7 +18,12 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
-  const login = () => {
+  const login = (user) => {
+    setCurrentUser({
+      username: user.username,
+      blogs: user.blogs,
+      userId: user.id,
+    });
     setIsLoggedIn(true);
   };
 
@@ -36,8 +41,8 @@ function App() {
 
   return (
     <div className="App">
-      {isLoggedIn ? <NavBar logout={logout} /> : <Navigate to="/login" />}
-      <Outlet context={[login, blogPosts]}/>
+      {isLoggedIn ? <NavBar logout={logout} currentUser={currentUser}/> : <Navigate to="/login" />}
+      <Outlet context={[login, blogPosts, currentUser]}/>
     </div>
   );
 }
