@@ -57,7 +57,7 @@ function SignUp() {
       ...formData,
       [e.target.name]: e.target.value,
     });
-    console.log(formData);
+    //console.log(formData);
   };
 
   return (
