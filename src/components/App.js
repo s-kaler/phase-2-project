@@ -21,7 +21,7 @@ function App() {
   const login = (user) => {
     setCurrentUser({
       username: user.username,
-      blogs: user.blogs,
+      blogIDs: user.blogIDs,
       userId: user.id,
     });
     setIsLoggedIn(true);

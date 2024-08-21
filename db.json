@@ -23,7 +23,7 @@
     {
       "username": "john",
       "password": "password",
-      "blogs": [],
+      "blogIDs": [1],
       "id": 1
     }
   ]
