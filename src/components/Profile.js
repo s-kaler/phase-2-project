@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 
 function Profile() {
   const params = useParams();
-  console.log("Params:", params.id);
+  //console.log("Params:", params.id);
   const [user, setUser] = useState({
     username: "",
     id: "",
@@ -20,21 +20,39 @@ function Profile() {
         blogIDs: data.blogIDs,
         id: data.id
       })
-      console.log(data.blogIDs)
-      data.blogIDs.forEach(blog => {
-        fetch(`http://localhost:4000/blogs/${blog}`)
-      });
-     console.log(data)
+      //console.log(data.blogIDs)
+      data.blogIDs.forEach(blogID => {
+        console.log(blogID)
+        fetch(`http://localhost:4000/blogs/${blogID}`)
+        .then(r => r.json())
+        .then(data => {
+          console.log(data)
+          setBlogs(blogs => [...blogs, data]) 
+        })
+      })
+     //console.log(data)
     })
   }, [])
 
-  const blogList = user.blogIDs.map(post => (
-    <article className="blog-post" key={post}>
+  const blogList = blogs.map(post => {
+    console.log(post)
+    return (
+      <article className="blog-post" key={post.id}>
+        <p>
+          Blog Post: <Link to={`/blogs/${post.id}`}> {post.title}</Link>
+        </p>
+      </article>
+    )
+  })
+/*
+  const blogList = blogs.map(post => (
+    <article className="blog-post" key={post.id}>
       <p>
-        <Link to={`/blogs/${post}`}> Blog Post {post}</ Link>
+        <Link to={`/blogs/${post.id}`}> Blog Post {post.title}</ Link>
       </p>
     </article>
   ))
+  */
 
   return (
     <div>
