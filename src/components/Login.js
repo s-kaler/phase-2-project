@@ -4,11 +4,12 @@ import { useOutletContext, Link } from "react-router-dom";
 
 function Login() {
   const [users, setUsers] = useState([]);
-  const [login, blogs, currentUser] = useOutletContext();
+  const [login, currentUser] = useOutletContext();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
+  const [errorFlag, setError] = useState("");
 
   // Access the login function passed as context
   useEffect(() => {
@@ -28,7 +29,7 @@ function Login() {
   // Create a function that calls the login function when the form is submitted
   function handleLogin(e) {
     e.preventDefault();
-    console.log(e.target.username.value);
+    //console.log(e.target.username.value);
     // Check if the user exists in the users array
     const user = users.find(user => user.username === formData.username);
     if (user && user.password === formData.password) {
@@ -36,13 +37,14 @@ function Login() {
       // Call the login function with the user object
       login(user);
     } else {
-      console.log("Invalid credentials");
+      setError("Invalid credentials");
     }
   };
 
   return (
     <> 
       <form onSubmit={handleLogin}>
+        <p id="errors">{errorFlag}</p>
         <label htmlFor="username">Username</label>
         <div>
           <input

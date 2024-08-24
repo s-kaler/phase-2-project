@@ -9,7 +9,7 @@ function NavBar({currentUser, logout}) {
         {" "}
         <NavLink to={profileLink} className="nav-link">Profile</NavLink>
         {" "}
-        <NavLink to="/newBlog" className="nav-link">New Blog</NavLink>
+        <NavLink to="/newblog" className="nav-link">New Blog</NavLink>
         <button onClick={logout} className="logout">Logout</button>
     </nav>
   )

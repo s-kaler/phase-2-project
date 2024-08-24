@@ -17,6 +17,24 @@
       "content": "This is the content of my third blog post.",
       "author": "Bob Johnson",
       "id": "3"
+    },
+    {
+      "title": "a",
+      "content": "b",
+      "author": "john",
+      "id": "UJ8TnXY"
+    },
+    {
+      "title": "a",
+      "content": "b",
+      "author": "john",
+      "id": "JYS8YDc"
+    },
+    {
+      "title": "aa",
+      "content": "bb",
+      "author": "john",
+      "id": "Y0i0bGF"
     }
   ],
   "users": [
@@ -24,7 +42,9 @@
       "username": "john",
       "password": "password",
       "blogIDs": [
-        1
+        1,
+        "JYS8YDc",
+        "Y0i0bGF"
       ],
       "id": "1"
     },

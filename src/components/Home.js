@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link, useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
 function Home() {
-  const [login, blogs, currentUser] = useOutletContext();
+
+  const [blogPosts, setBlogPosts] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:4000/blogs")
+      .then(r => r.json())
+      .then(data => setBlogPosts(data))
+      .catch(error => console.error(error));
+  }, []);
+  const [login, currentUser] = useOutletContext();
   //console.log(blogs);
   console.log("Logged in as:", currentUser);
 
-  const blogList = blogs.map(post => (
+  const blogList = blogPosts.map(post => (
     <article className="blog-post" key={post.id}>
       <p>
         <Link to={`/blogs/${post.id}`}>{post.title}</ Link>

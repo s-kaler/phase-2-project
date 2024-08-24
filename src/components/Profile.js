@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Outlet, Link, useOutletContext, unstable_useViewTransitionState } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function Profile() {
   const params = useParams();

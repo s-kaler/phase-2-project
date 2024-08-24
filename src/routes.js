@@ -32,7 +32,7 @@ const routes = [
         element: <Profile />
       },
       {
-        path: 'newBlog',
+        path: 'newblog',
         element: <NewBlog />
       }
     ]
