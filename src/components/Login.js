@@ -49,7 +49,7 @@ function Login() {
         <div>
           <input
             id="username"
-            type="text"
+            type="username"
             name="username"
             value={formData.username}
             onChange={handleChange}

@@ -21,15 +21,17 @@ function Profile() {
         id: data.id
       })
       //console.log(data.blogIDs)
-      data.blogIDs.forEach(blogID => {
-        console.log(blogID)
-        fetch(`http://localhost:4000/blogs/${blogID}`)
-        .then(r => r.json())
-        .then(data => {
-          //console.log(data)
-          setBlogs(blogs => [...blogs, data]) 
+      if(data.blogIDs) {
+        data.blogIDs.forEach(blogID => {
+          console.log(blogID)
+          fetch(`http://localhost:4000/blogs/${blogID}`)
+            .then(r => r.json())
+            .then(data => {
+              //console.log(data)
+              setBlogs(blogs => [...blogs, data])
+            })
         })
-      })
+      }
      //console.log(data)
     })
   }, [])
