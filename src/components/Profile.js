@@ -26,7 +26,7 @@ function Profile() {
         fetch(`http://localhost:4000/blogs/${blogID}`)
         .then(r => r.json())
         .then(data => {
-          console.log(data)
+          //console.log(data)
           setBlogs(blogs => [...blogs, data]) 
         })
       })
@@ -44,15 +44,6 @@ function Profile() {
       </article>
     )
   })
-/*
-  const blogList = blogs.map(post => (
-    <article className="blog-post" key={post.id}>
-      <p>
-        <Link to={`/blogs/${post.id}`}> Blog Post {post.title}</ Link>
-      </p>
-    </article>
-  ))
-  */
 
   return (
     <div>
