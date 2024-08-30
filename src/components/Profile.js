@@ -48,7 +48,7 @@ function Profile() {
   })
 
   return (
-    <div>
+    <div className="profile-container">
       <h1>{user.username}'s Blogs</h1>
         {blogList}
     </div>

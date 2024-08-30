@@ -40,6 +40,7 @@ function NewBlog() {
           title: formData.title,
           content: formData.blogBody,
           author: formData.author,
+          userId: currentUser.id
         })
       })
       .then(r => r.json())
@@ -60,7 +61,7 @@ function NewBlog() {
   }
 
   return (
-    <div>
+    <div className="new-blog">
       <h1>Write New Blog</h1>
       <p id="errors">{errorFlag}</p>
       <form onSubmit={handleSubmit}>

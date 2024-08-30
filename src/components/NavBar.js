@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
-import "./NavBar.css";
 
 function NavBar({currentUser, logout}) {
   const profileLink = `/profile/${currentUser.userId}`;
   return (
-    <nav>
+    <nav className="navbar">
         <NavLink to="/" className="nav-link">Home</NavLink>
         {" "}
         <NavLink to={profileLink} className="nav-link">Profile</NavLink>

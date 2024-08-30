@@ -1,6 +1,5 @@
 .App {
   text-align: left;
-  margin-left: 5px;
 }
 
 .App-logo {
@@ -41,4 +40,74 @@
 .body-input {
   width: 600px;
   height: 400px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: bisque;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.logout {
+  position: absolute;
+  right: 10px;
+  font-size: 20px
+}
+
+.app-body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home  {
+  text-align: center;
+}
+
+.profile-container {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-container {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.blog-author {
+  text-align: center;
+}
+
+.blog-content {
+  padding-top: 20px;
+  text-indent: 1cm;
+}
+
+.new-blog {
+  padding-left: 20px;
 }

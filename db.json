@@ -2,8 +2,9 @@
   "blogs": [
     {
       "title": "My First Blog Post",
-      "content": "This is the content of my first blog post.",
+      "content": "Welcome to our blog! We are thrilled to share our insights and experiences with you. In this post, we will explore a topic that is relevant to many people. We hope you find it interesting and valuable. If you have any questions or need further clarification, please feel free to reach out to us. Stay tuned for more content!",
       "author": "John Doe",
+      "userId": "1",
       "id": "1"
     },
     {
@@ -42,7 +43,7 @@
       "username": "john",
       "password": "password",
       "blogIDs": [
-        1,
+        "1",
         "JYS8YDc",
         "Y0i0bGF"
       ],

@@ -42,7 +42,7 @@ function Login() {
   };
 
   return (
-    <> 
+    <div className="login-form"> 
       <form onSubmit={handleLogin}>
         <p id="errors">{errorFlag}</p>
         <label htmlFor="username">Username</label>
@@ -71,7 +71,7 @@ function Login() {
         <button type="submit">Sign Up</button>
       </Link>
       <p>{}</p>
-    </>
+    </div>
     
     
   );

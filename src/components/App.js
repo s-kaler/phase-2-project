@@ -38,12 +38,12 @@ function App() {
     } else { 
       navigate("/login")
     }
-  }, [isLoggedIn])
+  }, [isLoggedIn, navigate]);
 
   return (
     <div className="App">
       {isLoggedIn ? <NavBar logout={logout} currentUser={currentUser}/> : <Navigate to="/login" />}
-      <Outlet context={[login, currentUser]}/>
+      <Outlet context={[login, currentUser]} />
     </div>
   );
 }

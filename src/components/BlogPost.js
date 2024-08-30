@@ -1,8 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function BlogPost() {
-  const [blog, setBlog] = useState({});
+  const [blog, setBlog] = useState({
+    title: "",
+    author: "",
+    userId: "",
+    content: "",
+  });
   const params = useParams();
   const blogId = params.id;
 
@@ -14,10 +19,11 @@ function BlogPost() {
   }, [blogId]);
 
   return (
-    <div className="blog-post">
-      <h1>{blog.title}</h1>
-      <p>by {blog.author}</p>
-      <p>{blog.content}</p>
+    <div className="blog-container">
+      <h1 className="blog-title">{blog.title}</h1>
+      <p className="blog-author">by {blog.author} </p>
+      <Link className="blog-author"  to={`/profile/${blog.userId}`}>View Profile</Link>
+      <p className="blog-content">{blog.content}</p>
     </div>
   );
 }
