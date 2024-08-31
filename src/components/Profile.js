@@ -34,7 +34,7 @@ function Profile() {
       }
      //console.log(data)
     })
-  }, [])
+  }, [params.id])
 
   const blogList = blogs.map(post => {
     console.log(post)
