@@ -61,30 +61,33 @@ function SignUp() {
   };
 
   return (
-    <form onSubmit={handleSignUp}>
-      <p id="errors">{errorFlag}</p>
-      <label htmlFor="username">Enter New Username</label>
-      <div>
-        <input id="username" type="text" name="username" onChange={handleChange}/>
-      </div>
-      {/*
+    <div className="login-form">
+      <form onSubmit={handleSignUp}>
+        <p id="errors">{errorFlag}</p>
+        <label htmlFor="username">Enter New Username</label>
+        <div>
+          <input id="username" type="text" name="username" onChange={handleChange} />
+        </div>
+        {/*
       <label htmlFor="email">Email</label>
       <div>
         <input id="email" type="email" name="email" />
       </div>
       */}
-      <label htmlFor="password">Enter New Password</label>
-      <div>
-        <input id="password" type="password" name="password" onChange={handleChange} />
-      </div>
-      <label htmlFor="confirmPassword">Confirm Password</label>
-      <div>
-        <input id="confirmPassword" type="password" name="confirmPassword" onChange={handleChange} />
-      </div>
-      <button type="submit">Sign Up</button>
-      <br></br>
-      <Link to="/login">Back To Login</Link>
-    </form>
+        <label htmlFor="password">Enter New Password</label>
+        <div>
+          <input id="password" type="password" name="password" onChange={handleChange} />
+        </div>
+        <label htmlFor="confirmPassword">Confirm Password</label>
+        <div>
+          <input id="confirmPassword" type="password" name="confirmPassword" onChange={handleChange} />
+        </div>
+        <button type="submit">Sign Up</button>
+        <br></br>
+        <Link to="/login">Back To Login</Link>
+      </form>
+    </div>
+    
   )
 }
 

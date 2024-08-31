@@ -21,7 +21,7 @@ function NewBlog() {
   }
 
   function handleSubmit(e) {
-    console.log(e)
+    //console.log(e)
     e.preventDefault();
     if (formData.title === "" || formData.blogBody === "") {
       setError("Please fill in all fields.");
@@ -30,7 +30,7 @@ function NewBlog() {
     else {
       //e.reset();
       setSubmitted(true);
-      console.log("User signed up successfully!");
+      console.log("User submitted successfully");
       fetch("http://localhost:4000/blogs", {
         method: "POST",
         headers: {
@@ -40,12 +40,12 @@ function NewBlog() {
           title: formData.title,
           content: formData.blogBody,
           author: formData.author,
-          userId: currentUser.id
+          userId: currentUser.userId
         })
       })
       .then(r => r.json())
       .then(data => {
-        console.log(data.id)
+        //console.log(data.id)
         currentUser.blogIDs.push(data.id);
         fetch(`http://localhost:4000/users/${currentUser.userId}`, {
           method: "PATCH",
