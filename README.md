@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# phase-2-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The task of the this project was to create a react app from scratch with multiple components, state management, and clien-side routing.
 
-## Available Scripts
+The actual content of the app was of my own choice, so I created a blog site with simple features. Notable features are the ability to sign up as a new user, log in as an existing user, view other users' profiles and create your own blog posts.
 
-In the project directory, you can run:
+The Components used in this application are:
+- BlogPost.js
+- Home.js
+- Login.js
+- NavBar.js
+- NewBlog.js
+- Profile.js
+- SignUp.js
 
-### `npm start`
+When first launching the app, it will check if the user is logged in. If not, it will automatically navigate to the login page. If the user does not have an account, there is a link to the sign up page. If a new user has signed up, they can navigate back to the login page. Once the user has logged in, they will directed to the home page, where all blog posts are displayed. At the top of the page, there is a navigation bar with links to the home page, current user's profile, the new blog page, and a button to log out. There are links to view each blog post on separate pages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+When a user clicks on a link to a blog post, they can also view the profile of the blog author's profile.  On the profile page, there is a list of that user's own blog posts. The current logged-in user can also click the navigation bar link to their own profile.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If the current user wants to create a new blog post, they can use the form in the new blog page. When a new blog is submitted, it will be displayed on the home page and on the user's profile. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Future features that could be implemented are the ability to view the website as an anonymous user, the ability to edit blog posts after they have been posted, and adding more options to create new blogs with categories, tags, and ways to filter them. Other updates to the app would include having nested components for routing to different pages based on current user profile or current blog, such as editing current blog post. 
