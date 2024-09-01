@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 function Profile() {
+  //user profile for user searched for in params displayed, regardless of current logged in user
   const params = useParams();
   //console.log("Params:", params.id);
   const [user, setUser] = useState({
@@ -11,6 +12,7 @@ function Profile() {
   })
   const [blogs, setBlogs] = useState([])
 
+  //user profile is fetched according to params passed in url
   useEffect(() => {
     fetch(`http://localhost:4000/users/${params.id}`)
     .then(r => r.json())
@@ -21,6 +23,7 @@ function Profile() {
         id: data.id
       })
       //console.log(data.blogIDs)
+      //fetched user has an array of blog IDs, so data for each blog is returned
       if(data.blogIDs) {
         data.blogIDs.forEach(blogID => {
           console.log(blogID)
@@ -36,6 +39,7 @@ function Profile() {
     })
   }, [params.id])
 
+  //blogs for current user profile are displayed with links to each blog
   const blogList = blogs.map(post => {
     console.log(post)
     return (

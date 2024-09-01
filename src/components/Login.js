@@ -3,6 +3,9 @@ import { useOutletContext, Link } from "react-router-dom";
 
 
 function Login() {
+  // login form for existing users
+  // has a link to navigate to signup page for new users
+  // users will be redirected to login page if they are not already logged in
   const [users, setUsers] = useState([]);
   const [login, currentUser] = useOutletContext();
   const [formData, setFormData] = useState({
@@ -27,6 +30,7 @@ function Login() {
   };
 
   // Create a function that calls the login function when the form is submitted
+  // could altenatively 
   function handleLogin(e) {
     e.preventDefault();
     //console.log(e.target.username.value);
@@ -72,8 +76,6 @@ function Login() {
       </Link>
       <p>{}</p>
     </div>
-    
-    
   );
 };
 

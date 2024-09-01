@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 function SignUp() {
+  // signup form for new users, will be posted to the database when form is submitted
+  // has a link to go back to login screen if already signed up
   const [formData, setFormData] = useState({ username: "", password: "", confirmPassword: ""});
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
@@ -17,6 +19,7 @@ function SignUp() {
   // Create a function that handles form submission and sends user data to the server
   function handleSignUp(e) {
     e.preventDefault();
+    // conditional GET request based on whether or not provided form data is valid
     if (formData.username === "" || formData.password === "" || formData.confirmPassword === "") {
       setError("Please fill in all fields.");
       return; 
@@ -46,12 +49,13 @@ function SignUp() {
           }),
       })
     }
+    // state change to default state after sign up  process
     setFormData({
       username: "", password: "", confirmPassword: "" });
     // Navigate to the login page
     navigate("/login");
   }
-
+  // update state with new data from form as it is being written
   function handleChange(e) {
     setFormData({
       ...formData,

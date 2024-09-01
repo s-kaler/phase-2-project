@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function BlogPost() {
+  //blog post is displayed as data fetched with link to author's profile
   const [blog, setBlog] = useState({
     title: "",
     author: "",

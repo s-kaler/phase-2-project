@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 
 function Home() {
+  //creating state for fetched blog posts to be displayed on the homepage
   const [blogPosts, setBlogPosts] = useState([]);
   function addBlogPosts(fetchedBlogs) {
     setBlogPosts(fetchedBlogs)
@@ -13,10 +14,11 @@ function Home() {
       .then(data => addBlogPosts(data))
       .catch(error => console.error(error));
   }, []);
+  //context from login to keep track of current logged in user without having to fetch again
   const [login, currentUser] = useOutletContext();
   //console.log(blogs);
   console.log("Logged in as:", currentUser);
-
+  //fetched blog posts are displayed with links to individual post pages
   const blogList = blogPosts.map(post => (
     <article className="blog-post" key={post.id}>
       <p>

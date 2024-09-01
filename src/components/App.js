@@ -5,6 +5,7 @@ import { Outlet, Navigate, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 function App() {
+  // creating state for logged in user. state will be updated when user logs in successfully
   const [currentUser, setCurrentUser] = useState(null);
   /*
   const [blogPosts, setBlogPosts] = useState([]);
@@ -15,10 +16,11 @@ function App() {
       .catch(error => console.error(error));
   }, []);
   */
-
+  // creating state for whether or not user is logged in
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
+  //login function that will be passed as context to routes for when user is logged in 
   const login = (user) => {
     setCurrentUser({
       username: user.username,
@@ -32,6 +34,7 @@ function App() {
     setIsLoggedIn(false);
   };
 
+  //if user is not logged in/logged out, then redirect to login page
   useEffect(() => {
     if (isLoggedIn) {
       navigate('/');
