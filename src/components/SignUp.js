@@ -8,6 +8,7 @@ function SignUp() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [errorFlag, setError] = useState("")
+  const [isSignedUp, setIsSignedUp] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:4000/users/")
@@ -45,15 +46,18 @@ function SignUp() {
         body: JSON.stringify({
           username: formData.username,
           password: formData.password,
-          blogs: []
+          blogIDs: []
           }),
       })
+      setIsSignedUp(true);
     }
     // state change to default state after sign up  process
     setFormData({
       username: "", password: "", confirmPassword: "" });
     // Navigate to the login page
-    navigate("/login");
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
   }
   // update state with new data from form as it is being written
   function handleChange(e) {
@@ -66,6 +70,9 @@ function SignUp() {
 
   return (
     <div className="login-form">
+      {isSignedUp ? 
+      <p>You have successfully signed up! Redirecting.</p>
+      :
       <form onSubmit={handleSignUp}>
         <p id="errors">{errorFlag}</p>
         <label htmlFor="username">Enter New Username</label>
@@ -73,11 +80,11 @@ function SignUp() {
           <input id="username" type="text" name="username" onChange={handleChange} />
         </div>
         {/*
-      <label htmlFor="email">Email</label>
-      <div>
-        <input id="email" type="email" name="email" />
-      </div>
-      */}
+        <label htmlFor="email">Email</label>
+        <div>
+          <input id="email" type="email" name="email" />
+        </div>
+        */}
         <label htmlFor="password">Enter New Password</label>
         <div>
           <input id="password" type="password" name="password" onChange={handleChange} />
@@ -89,9 +96,9 @@ function SignUp() {
         <button type="submit">Sign Up</button>
         <br></br>
         <Link to="/login">Back To Login</Link>
-      </form>
+        </form>
+      }
     </div>
-    
   )
 }
 

@@ -47,6 +47,7 @@ function Login() {
 
   return (
     <div className="login-form"> 
+    <h1>Please log in to start blogging!</h1>
       <form onSubmit={handleLogin}>
         <p id="errors">{errorFlag}</p>
         <label htmlFor="username">Username</label>
@@ -71,6 +72,7 @@ function Login() {
         </div>
         <button type="submit">Login</button>
       </form>
+      <br></br>
       <Link to="/signup">
         <button type="submit">Sign Up</button>
       </Link>

@@ -20,18 +20,11 @@
       "id": "3"
     },
     {
-      "title": "blog test 1",
-      "content": "body 1",
-      "author": "john",
-      "userId": "1",
-      "id": "3CQpJN4"
-    },
-    {
-      "title": "blog test 2",
-      "content": "body 2",
-      "author": "john",
-      "userId": "1",
-      "id": "ql9zeY8"
+      "title": "a",
+      "content": "a",
+      "author": "a",
+      "userId": "BnyhoHf",
+      "id": "wkrmZtH"
     }
   ],
   "users": [
@@ -39,17 +32,15 @@
       "username": "john",
       "password": "password",
       "blogIDs": [
-        "1",
-        "3CQpJN4",
-        "ql9zeY8"
+        "1"
       ],
       "id": "1"
     },
     {
-      "id": "9bb4",
-      "username": "john2",
-      "password": "password",
-      "blogs": []
+      "username": "a",
+      "password": "a",
+      "blogIDs": [],
+      "id": "BnyhoHf"
     }
   ]
 }

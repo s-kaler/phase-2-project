@@ -9,6 +9,7 @@ function BlogPost() {
     userId: "",
     content: "",
   });
+  const [hasUser, setUser] = useState()
   const params = useParams();
   const blogId = params.id;
 
@@ -23,7 +24,11 @@ function BlogPost() {
     <div className="blog-container">
       <h1 className="blog-title">{blog.title}</h1>
       <p className="blog-author">by {blog.author} </p>
-      <Link className="blog-author"  to={`/profile/${blog.userId}`}>View Profile</Link>
+      {blog.userId !== "" ?
+        <Link className="blog-author" to={`/profile/${blog.userId}`}>View Profile</Link>
+        :
+        <></>
+      }
       <p className="blog-content">{blog.content}</p>
     </div>
   );

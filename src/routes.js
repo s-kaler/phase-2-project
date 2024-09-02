@@ -4,7 +4,6 @@ import Login from './components/Login';
 import BlogPost from './components/BlogPost';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
-import NewBlog from './components/NewBlog'
 
 const routes = [
   {
@@ -30,10 +29,6 @@ const routes = [
       {
         path: 'profile/:id',
         element: <Profile />
-      },
-      {
-        path: 'newblog',
-        element: <NewBlog />
       }
     ]
   }

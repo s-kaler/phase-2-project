@@ -8,9 +8,7 @@ function NavBar({currentUser, logout}) {
     <nav className="navbar">
         <NavLink to="/" className="nav-link">Home</NavLink>
         {" "}
-        <NavLink to={profileLink} className="nav-link">Profile</NavLink>
-        {" "}
-        <NavLink to="/newblog" className="nav-link">New Blog</NavLink>
+        <NavLink to={profileLink} className="nav-link">{currentUser.username}'s Profile</NavLink>
         <button onClick={logout} className="logout">Logout</button>
     </nav>
   )

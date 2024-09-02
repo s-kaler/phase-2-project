@@ -13,10 +13,10 @@ The Components used in this application are:
 - Profile.js
 - SignUp.js
 
-When first launching the app, it will check if the user is logged in. If not, it will automatically navigate to the login page. If the user does not have an account, there is a link to the sign up page. If a new user has signed up, they can navigate back to the login page. Once the user has logged in, they will directed to the home page, where all blog posts are displayed. At the top of the page, there is a navigation bar with links to the home page, current user's profile, the new blog page, and a button to log out. There are links to view each blog post on separate pages.
+When first launching the app, it will check if the user is logged in. If not, it will automatically navigate to the login page. If the user does not have an account, there is a link to the sign up page. If a new user has signed up, they can navigate back to the login page. Once the user has logged in, they will directed to the home page, where all blog posts are displayed. At the top of the page, there is a navigation bar with links to the home page, current user's profile, and a button to log out. There are links to view each blog post on separate pages.
 
 When a user clicks on a link to a blog post, they can also view the profile of the blog author's profile.  On the profile page, there is a list of that user's own blog posts. The current logged-in user can also click the navigation bar link to their own profile.
 
-If the current user wants to create a new blog post, they can use the form in the new blog page. When a new blog is submitted, it will be displayed on the home page and on the user's profile. 
+If the current user wants to create a new blog post, they can use the form in the user profile. When a new blog is submitted, it will be displayed on the home page and on the user's profile. 
 
 Future features that could be implemented are the ability to view the website as an anonymous user, the ability to edit blog posts after they have been posted, and adding more options to create new blogs with categories, tags, and ways to filter them. Other updates to the app would include having nested components for routing to different pages based on current user profile or current blog, such as editing current blog post. 
