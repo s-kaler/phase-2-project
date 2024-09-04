@@ -20,11 +20,25 @@
       "id": "3"
     },
     {
-      "title": "a",
-      "content": "a",
-      "author": "a",
-      "userId": "BnyhoHf",
-      "id": "wkrmZtH"
+      "title": "My Blog Post",
+      "content": "I've been mulling over the idea of [Topic] for quite some time now. It's a subject that has intrigued me for various reasons, and I've found myself pondering its implications in my daily life. I'm eager to share my insights and reflections on this matter, and I hope you'll find my perspective thought-provoking and informative.",
+      "author": "John",
+      "userId": "1",
+      "id": "MsqJJTW"
+    },
+    {
+      "title": "George's First Blog",
+      "content": "I've been mulling over the idea of [Topic] for quite some time now. It's a subject that has intrigued me for various reasons, and I've found myself pondering its implications in my daily life. I'm eager to share my insights and reflections on this matter, and I hope you'll find my perspective thought-provoking and informative.",
+      "author": "George",
+      "userId": "ClJGCm5",
+      "id": "PzDfPHi"
+    },
+    {
+      "title": "Blog 1",
+      "content": "This is my first blog.",
+      "author": "Sunny",
+      "userId": "8dA6K_0",
+      "id": "0o5l-sg"
     }
   ],
   "users": [
@@ -37,10 +51,22 @@
       "id": "1"
     },
     {
-      "username": "a",
-      "password": "a",
+      "username": "george",
+      "password": "password",
       "blogIDs": [],
-      "id": "BnyhoHf"
+      "id": "ClJGCm5"
+    },
+    {
+      "username": "sundeep",
+      "password": "1234",
+      "blogIDs": [],
+      "id": "Am7C79h"
+    },
+    {
+      "username": "sunny",
+      "password": "1234",
+      "blogIDs": [],
+      "id": "8dA6K_0"
     }
   ]
 }

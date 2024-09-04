@@ -79,7 +79,7 @@ function Profile() {
     })
     .then(r => r.json())
     .then(fetchedData => {
-      console.log(fetchedData.id)
+      console.log(fetchedData.userId)
       setBlogs([...blogs, fetchedData])
       fetch(`http://localhost:4000/users/${currentUser.userId}`, {
         method: "PATCH",
