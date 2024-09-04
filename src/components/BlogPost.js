@@ -9,7 +9,6 @@ function BlogPost() {
     userId: "",
     content: "",
   });
-  const [hasUser, setUser] = useState()
   const params = useParams();
   const blogId = params.id;
 
