@@ -1,6 +1,6 @@
 # phase-2-project
 
-The task of the this project was to create a react app from scratch with multiple components, state management, and clien-side routing.
+The task of the this project was to create a react app from scratch with multiple components, state management, and client-side routing.
 
 The actual content of the app was of my own choice, so I created a blog site with simple features. Notable features are the ability to sign up as a new user, log in as an existing user, view other users' profiles and create your own blog posts.
 
